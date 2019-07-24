@@ -9,4 +9,8 @@ $instDIR="\\$srvName\Deploymentshare$\Applications\VS6.0"
 $dotProg="$instDIR\sp6\acmsetup.exe"
 $dotARGS=" /T $INSTDIR\sp6\sp698ent.stf /qn1"
 start-process $dotProg "$dotArgs" -wait
+
+
+
+
 New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\policies\system -Name EnableLUA -PropertyType DWord -Value 0 -Force
